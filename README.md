@@ -1,10 +1,10 @@
-#Cross-compiling C++ Projects for Raspberry Pi using CMake
+# Cross-compiling C++ Projects for Raspberry Pi using CMake
 
-##Introduction
+## Introduction
 
 Cross-compiling is the process that builds an application on one machine that targets another machine, in this case, we will build on a Windows 10 machine and target Raspberry Pi running Raspian Buster. One main advantage of cross-compiling is that we can make use of the full power of the host machine to compile large projects, i.e. Boost library or OpenGL projects. Another benefit to cross-compiling is that we can build everything from source ourself, eliminating the threat of mis-match binary.
 
-##Prerequisites
+## Prerequisites
 
 1. Toolchain:
 In order to build an application for the Raspberry Pi, we will need the compiler, linker and other tools that can compile for the Raspberry Pi. These set of tool are called toolchain. There are many pre-built toolchains that can be use, in this we will use pre-built Windows Toolchains for Raspberry Pi provided by SysProgs at [https://gnutoolchains.com/raspberry/](https://gnutoolchains.com/raspberry/).
@@ -18,7 +18,7 @@ There are many code editors available, i.e. Notepad++, Visual Studio Code, Subli
 4. CMake Tools (Optional):
 CMake Tools provides the native developer a full-featured, convenient, and powerful workflow for CMake-based projects in Visual Studio Code. It can be downloaded here: [https://github.com/microsoft/vscode-cmake-tools](https://github.com/microsoft/vscode-cmake-tools).
 
-##Instructions
+## Instructions
 
 1. Installing the GNU Toolchains.
 
@@ -111,7 +111,7 @@ This only need to be done after installing any new library on the Raspberry Pi. 
 
 	6.7. The executable should be inside the `build` folder, copy it over to the Raspberry Pi and execute it. Remember to set the correct permission when copying the file over to the Raspberry Pi.
 
-##Cross-compile library for the Raspberry Pi.
+## Cross-compile library for the Raspberry Pi.
 
 There are many libraries that won't be available on the Raspian's default repository or the version of the library is too old to use. Compiling the library on the Raspberry Pi is a long and painful process, especially with some large library like Boost. Cross-compiling a library will help in that regard.
 
