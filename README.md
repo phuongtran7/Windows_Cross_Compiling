@@ -15,7 +15,7 @@ CMake is a cross-platform tool that is used to build, test and package software.
 3. Code Editor:
 There are many code editors available, i.e. Notepad++, Visual Studio Code, Sublime Text, in this we will use Visual Studio Code as it has excellent support for CMake projects as well as intellisense and integration with Windows Subsystem for Linux (WSL). VSCode can be downloaded here: [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
-4. CMake Tools (Optional):
+4. CMake Tools:
 CMake Tools provides the native developer a full-featured, convenient, and powerful workflow for CMake-based projects in Visual Studio Code. It can be downloaded here: [https://github.com/microsoft/vscode-cmake-tools](https://github.com/microsoft/vscode-cmake-tools).
 
 ## Instructions
