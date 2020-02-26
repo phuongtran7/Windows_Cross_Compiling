@@ -132,3 +132,5 @@ In this example we will cross-compile [{fmt}](https://github.com/fmtlib/fmt), a 
     "FLATBUFFERS_BUILD_TESTS": "OFF"
 }
 ```
+
+Also, there is a Bazel `BUILD` file in the project when clone from source. This file might interfere with CMake Tools. Delete it if you are using CMake Tools to cross-compile.
