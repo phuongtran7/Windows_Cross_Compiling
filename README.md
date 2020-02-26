@@ -127,10 +127,14 @@ In this example we will cross-compile [{fmt}](https://github.com/fmtlib/fmt), a 
 
 1. When building [Flatbuffers](https://github.com/google/flatbuffers), due to the fact that we are cross-compiling, we have to turn of building test or it will fail. More info here: [https://github.com/google/flatbuffers/issues/5569](https://github.com/google/flatbuffers/issues/5569).
 
+Also, there is a Bazel `BUILD` file in the project when clone from source. This file might interfere with CMake Tools. Delete it or choose a different build folder:
+
 ```
-"cmake.configureSettings": {
-    "FLATBUFFERS_BUILD_TESTS": "OFF"
+{
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "cmake.buildDirectory": "${workspaceFolder}/out",
+    "cmake.configureSettings": {
+        "FLATBUFFERS_BUILD_TESTS": "OFF"
+    }
 }
 ```
-
-Also, there is a Bazel `BUILD` file in the project when clone from source. This file might interfere with CMake Tools. Delete it if you are using CMake Tools to cross-compile.
