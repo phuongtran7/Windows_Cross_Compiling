@@ -129,6 +129,7 @@ In this example we will cross-compile [{fmt}](https://github.com/fmtlib/fmt), a 
 
 Also, there is a Bazel `BUILD` file in the project when clone from source. This file might interfere with CMake Tools. Delete it or choose a different build folder:
 
+#### **`settings.json`**
 ```
 {
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
