@@ -121,3 +121,14 @@ In this example we will cross-compile [{fmt}](https://github.com/fmtlib/fmt), a 
 2. Open the project with Visual Studio Code.
 3. Because the project use CMake as the build system, VSCode automatically recognize that and configure the project for us.
 4. Choose the `GCC for arm-linux-gnueabihf 8.3.0` kit just like we did above and build the project.
+
+
+## Notes.
+
+1. When building [Flatbuffers](https://github.com/google/flatbuffers), due to the fact that we are cross-compiling, we have to turn of building test or it will fail. More info here: [https://github.com/google/flatbuffers/issues/5569](https://github.com/google/flatbuffers/issues/5569).
+
+```
+"cmake.configureSettings": {
+    "FLATBUFFERS_BUILD_TESTS": "OFF"
+}
+```
